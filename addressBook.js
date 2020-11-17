@@ -160,3 +160,12 @@ function countContacts(length, Contact) {
     return length;
 }
 console.log("Number of contacts in address book : " + addressBookArray.reduce(countContacts, 0));
+
+// UC 7
+function checkDuplicate(newContact) {
+    addressBookArray.forEach(contact => {
+        if ((contact.firstName + contact.lastName) == (newContact.firstName + newContact.lastName)) {
+            return true;
+        }
+    });
+}
