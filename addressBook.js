@@ -137,3 +137,19 @@ function editContact(personName) {
 let editName = prompt("Enter person's name to edit contact : ");
 editContact(editName);
 console.log(addressBookArray)
+
+// UC 5
+function deleteContact(personName) {
+    let i = 0;
+    addressBookArray.forEach(contact => {
+        if ((contact._firstName + " " + contact._lastName) == (personName)) {
+            addressBookArray.splice(i, 1);
+            addressBookArray.indexOf()
+        }
+        i++;
+    });
+}
+
+let deleteName = prompt("Enter the person's name to delete contact : ");
+deleteContact(deleteName);
+console.log(addressBookArray);
