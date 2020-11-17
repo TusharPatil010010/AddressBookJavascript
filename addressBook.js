@@ -153,3 +153,10 @@ function deleteContact(personName) {
 let deleteName = prompt("Enter the person's name to delete contact : ");
 deleteContact(deleteName);
 console.log(addressBookArray);
+
+// UC 6
+function countContacts(length, Contact) {
+    length++;
+    return length;
+}
+console.log("Number of contacts in address book : " + addressBookArray.reduce(countContacts, 0));
