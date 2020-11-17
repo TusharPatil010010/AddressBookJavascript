@@ -110,3 +110,30 @@ function addContact() {
 }
 addContact();
 console.log(addressBookArray);
+
+// UC 4
+function editContact(personName) {
+    addressBookArray.forEach(contact => {
+        if ((contact._firstName + " " + contact._lastName) == (personName)) {
+            let choice = prompt("Enter choice \n1.Add new phone number \n2.Add new email \n3.Exit ");
+            switch (parseInt(choice)) {
+                case 1:
+                    var phoneNumber = prompt("Enter new phone number : ");
+                    contact._phone = phoneNumber;
+                    break;
+                case 2:
+                    var emailId = prompt("Enter new email : ");
+                    contact._email = emailId;
+                    break;
+                case 3:
+                    return;
+                default:
+                    console.log("Enter valid choice");
+            }
+
+        }
+    });
+}
+let editName = prompt("Enter person's name to edit contact : ");
+editContact(editName);
+console.log(addressBookArray)
