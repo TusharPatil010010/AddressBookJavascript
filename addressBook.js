@@ -182,3 +182,19 @@ function searchPersonByState(name, state) {
 }
 let personByState = searchPersonByState(prompt("Enter name to search : "), prompt("Enter state name: "));
 console.log("Persons in " + personByState._state + " state are: " + personByState);
+
+// UC 9
+function viewPersonsByCity(city) {
+    let list = addressBookArray.filter(contact => contact.city == city);
+    return list;
+}
+cityToSearch = prompt("Enter a city name to view contacts: ");
+let personsByCity = viewPersonsByCity(cityToSearch);
+console.log("All persons in " + cityToSearch + " are : " + personsByCity);
+
+function viewPersonsByState(state) {
+    return addressBookArray.filter(contact => contact._state == state);
+}
+stateToSearch = prompt("Enter a state name to view contacts: ");
+let personsByState = viewPersonsByStates(stateToSearch);
+console.log("All persons in " + state + " are : " + personsByState);
