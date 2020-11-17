@@ -215,11 +215,22 @@ console.log("Number of persons in " + stateToCount + " are : " + countByState(st
 function compareByName(contact1, contact2){
     let c1 = (contact1.firstName + " " + contact1.lastName).toUpperCase();
     let c2 = (contact2.firstName + " " + contact2.lastName).toUpperCase();
-    if(c1 > c2) return 1;
-    if(c1 < c2) return -1;
+    return c1 - c2;
 }
 function sortByName(){
     let sortedList = addressBookArray.sort(compareByName);
     console.log(sortedList);
 }
 sortByName();
+
+//UC12
+function compareByZip(contact1, contact2) {
+    let c1 = contact1.zip;
+    let c2 = contact2.zip;
+    return c1 - c2;
+}
+function sortByZip() {
+    let sortedList = addressBookArray.sort(compareByZip);
+    console.log(sortedList);
+}
+sortByZip(); 
