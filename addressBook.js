@@ -102,3 +102,11 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+// UC 3
+let addressBookArray = new Array();
+function addContact() {
+    addressBookArray.push(createContact());
+}
+addContact();
+console.log(addressBookArray);
